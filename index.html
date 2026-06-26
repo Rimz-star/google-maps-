@@ -2,38 +2,90 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Peta Indonesia - Google Maps</title>
+<title>Lokasi - Jl. Katelayu, Desa Kalisalak</title>
 <style>
   html, body {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .map-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
   }
   iframe {
     width: 100%;
     height: 100%;
     border: 0;
+    display: block;
+  }
+  /* Panel koordinat di pojok kanan atas */
+  .coord-box {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(255,255,255,0.95);
+    padding: 10px 14px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    font-size: 13px;
+    line-height: 1.5;
+    z-index: 10;
+    max-width: 240px;
+  }
+  .coord-box b {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 14px;
+  }
+  .coord-box .alamat {
+    font-size: 12px;
+    color: #333;
+    margin-bottom: 6px;
+  }
+  .coord-box .note {
+    font-size: 11px;
+    color: #777;
+    margin-top: 6px;
+    font-style: italic;
   }
 </style>
 </head>
 <body>
+<div class="map-container">
+
+  <!-- Panel info koordinat + alamat (pojok kanan atas) -->
+  <div class="coord-box">
+    <b>Titik Koordinat</b>
+    7°33'02.7"S 109°13'14.3"E<br>
+    (-7.550750, 109.220639)
+    <div class="alamat">
+      Jl. Katelayu, samping rumah RT,<br>
+      Desa Kalisalak, Kec. Kebasen,<br>
+      Kab. Banyumas, Jawa Tengah
+    </div>
+    <div class="note">
+      Belum ada ulasan karena lokasi ini bukan tempat usaha terdaftar di Google Maps.
+    </div>
+  </div>
+
   <!--
-    Catatan:
-    - Embed ini menampilkan Google Maps versi lengkap: ada tombol zoom (+/-),
-      bisa scroll/pinch untuk zoom, ada pilihan Peta/Satelit, dan kontrol
-      Street View (ikon "pegman" oranye di pojok kanan bawah) untuk masuk
-      ke mode jalan-jalan virtual.
-    - Tampilan awal di-set agar terlihat seluruh wilayah Indonesia dari atas
-      (koordinat tengah ±-2.5,118 dengan zoom level 5).
-    - Anda bisa mengubah "ll=" (koordinat tengah) dan "z=" (level zoom,
-      makin besar makin dekat) sesuai kebutuhan.
+    Embed Google Maps:
+    - q=-7.548304,109.217676 -> menandai titik koordinat di peta (bukan ke bangunan tertentu)
+    - z=17 -> level zoom cukup dekat untuk melihat jalan
+    - Kontrol zoom, satelit, dan ikon Street View (pegman) tetap muncul
+      di pojok kiri/kanan bawah peta secara otomatis dari Google Maps.
   -->
   <iframe
-    src="https://www.google.com/maps?ll=-2.5,118&z=5&output=embed"
+    src="https://www.google.com/maps?q=-7.550750,109.220639&z=18&output=embed"
     allowfullscreen
     loading="lazy"
     referrerpolicy="no-referrer-when-downgrade">
   </iframe>
+
+</div>
 </body>
 </html>
