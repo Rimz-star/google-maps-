@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Peta Indonesia - Google Maps</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+</style>
+</head>
+<body>
+  <!--
+    Catatan:
+    - Embed ini menampilkan Google Maps versi lengkap: ada tombol zoom (+/-),
+      bisa scroll/pinch untuk zoom, ada pilihan Peta/Satelit, dan kontrol
+      Street View (ikon "pegman" oranye di pojok kanan bawah) untuk masuk
+      ke mode jalan-jalan virtual.
+    - Tampilan awal di-set agar terlihat seluruh wilayah Indonesia dari atas
+      (koordinat tengah ±-2.5,118 dengan zoom level 5).
+    - Anda bisa mengubah "ll=" (koordinat tengah) dan "z=" (level zoom,
+      makin besar makin dekat) sesuai kebutuhan.
+  -->
+  <iframe
+    src="https://www.google.com/maps?ll=-2.5,118&z=5&output=embed"
+    allowfullscreen
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</body>
+</html>
